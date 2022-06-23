@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('operadora_table', function (Blueprint $table) {
             $table->id();
-            $table->image('logo');
             $table->string('nome-operadora');
-            $table->boolean('visivel');
             $table->timestamps();
         });
-    }   
+    }
 
     /**
      * Reverse the migrations.
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        //
     }
 };
