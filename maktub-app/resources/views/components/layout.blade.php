@@ -24,25 +24,7 @@
     </div>
 
     
-    <div class="container">
-        <img src="{{asset('/assets/img/Capturar.PNG')}}" width="100%" alt="">
-    </div>
 
-    <div class="container d-flex justify-content-between mt-5 mb-5">
-        <div>
-            <img src="{{asset('/assets/img/bradescologo.png')}}" width="75%" alt="">
-        </div>
-        <div>
-            <img src="{{asset('/assets/img/allianzlogo.png')}}" width="75%" alt="">
-        </div>
-        <div>
-            <img src="{{asset('/assets/img/portologo.png')}}" width="75%" alt="">
-        </div>
-    </div>
-  
-    <div class="container">
-        <hr>
-    </div>
 
     
     {{ $slot }}

@@ -24,3 +24,7 @@ Route::get('/about', function(){
 Route::get('/maktub', function(){
     return view('maktub-seguros');
 });
+
+Route::get('/planos/cadastro', function(){
+    return view('planos/cadastro');
+});

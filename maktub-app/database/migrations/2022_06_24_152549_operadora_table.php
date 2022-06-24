@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('planos_table', function (Blueprint $table) {
+        Schema::create('operadora-table', function (Blueprint $table) {
             $table->id();
-            $table->string('nome-plano');
-            $table->integer('coparticipacao');
-            $table->string('cobertura');
-            $table->float('reembolso')
+            $table->string('nome-operadora');
+            $table->boolean('visivel');
             $table->timestamps();
         });
     }

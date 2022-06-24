@@ -13,9 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('operadora_table', function (Blueprint $table) {
+        Schema::create('planos-table', function (Blueprint $table) {
             $table->id();
-            $table->string('nome-operadora');
+            $table->string('nome-plano');
+            $table->integer('coparticipacao-percent');
+            $table->string('cobertura');
+            $table->float('reembolso');
+            $table->string('hospitais');
+            $table->float('valor-plano');
+            $table->boolean('visivel');
             $table->timestamps();
         });
     }
@@ -27,6 +33,7 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('planos-table');
+
     }
 };
