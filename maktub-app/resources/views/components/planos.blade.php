@@ -18,7 +18,7 @@
             <li class="nav-item"><a href="" class="nav-link" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
             <li class="nav-item"><a href="/maktub" class="nav-link active">Planos</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">CMS</a></li>
+            <li class="nav-item"><a href="/cms" class="nav-link">CMS</a></li>
         </ul>            
         </header>
     </div>

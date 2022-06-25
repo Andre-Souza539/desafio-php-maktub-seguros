@@ -20,20 +20,23 @@
     <hr>
   </div>
 
+
+  @foreach ($planos as $p)
   <div class="container d-flex justify-content-around mt-5 mb-5">
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="card" style="width: 18rem; border-radius:25px; padding:30px;">
+      <div class="card-body ">
+
+        <h5 class="card-title">{{$p->operadora}}</h5>
+        <h5 class="card-title">{{$p->nome}}</h5>
+        <p class="card-text">Coparticipação {{$p->coparticipacao}}%</p>
+        <p class="card-text">{{$p->cobertura}}</p>
+        <p class="card-text">Principais Hospitais:</p>
+        <p class="card-text">{{$p->hospitais}}</p>
+        <p class="card-text">A partir de: {{$p->valor}}</p>
+        <a href="#" class="btn btn-primary">Saiba Mais</a>
       </div>
     </div>
   </div>
+  @endforeach
+  
 </x-layout>
