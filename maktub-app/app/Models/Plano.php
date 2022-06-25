@@ -9,6 +9,4 @@ class Plano extends Model
 {
     use HasFactory;
     protected $table = 'planos-table';
-
-
 }

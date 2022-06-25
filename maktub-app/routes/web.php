@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\http\Controller\PlanoController;
+use App\Http\Controllers\PlanoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,7 @@ use App\http\Controller\PlanoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('maktub-seguros');
 });
 
 Route::get('/about', function(){
@@ -26,9 +26,11 @@ Route::get('/maktub', function(){
     return view('maktub-seguros');
 });
 
-Route::get('/planos/cadastro', function(){
-    return view('planos/cadastro');
-});
 
-Route::get('/planos/listar', [PlanoController::class, 'index']);
+Route::get('/planos/listar',[PlanoController::class, 'index']);
+Route::get('/planos/cadastro',[PlanoController::class, 'create']);
+Route::post('/planos/salvar',[PlanoController::class, 'store']);
+Route::post('/planos/atualizar/{id}',[PlanoController::class, 'atualizar']);
+Route::get('/planos/deletar/{id}',[PlanoController::class, 'delete']);
+Route::get('/planos/{id}/editar/',[PlanoController::class, 'edit']);
 

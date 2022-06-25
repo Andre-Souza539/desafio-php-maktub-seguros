@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('planos-table', function (Blueprint $table) {
             $table->id();
-            $table->string('nome-plano');
-            $table->integer('coparticipacao-percent');
+            $table->string('operadora');
+            $table->string('nome');
+            $table->integer('coparticipacao');
             $table->string('cobertura');
             $table->float('reembolso');
             $table->string('hospitais');
-            $table->float('valor-plano');
+            $table->float('valor');
             $table->boolean('visivel');
             $table->timestamps();
         });
